@@ -1,0 +1,156 @@
+/* Heading Content*/
+.container
+{
+    width: 90%;
+}
+.navlogo
+{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* Home Body Content*/
+#donorHomesection
+{
+    padding: 0px;
+}
+.sectionheading
+{
+    font-size: 40px;
+    font-weight: 600;
+   
+    margin-bottom: 10px;
+}
+
+
+.requirement-section-content
+{
+    color: #555;
+    font-size: 20px;
+    font-weight: 400;
+    word-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+.requirement-section-listHead
+{
+  
+    font-size: 19px;
+    font-weight: 500;
+    
+    
+}
+.sectioncontent
+{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+
+.sectioncontent li,i{
+    font-size: 18px;
+     color: #555;
+}
+.requirement-section
+{
+    padding-top: 25px;
+}
+
+/* Update info section*/
+.updateinfo-card, .updatestatus-card
+{
+    padding: 30px;
+}
+.card-title h5
+{
+    font-size: 30px;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+
+.updateinfo-card .card-title
+{
+    padding-left: 11px;
+}
+.input-field label
+ {
+            color: #000;
+}
+
+        /* label focus color */
+.input-field input:focus+label
+{
+            color: #d50000 !important;
+}
+
+        /* label underline focus color */
+.row .input-field input:focus 
+{
+            border-bottom: 1px solid #d50000 !important;
+            box-shadow: 0 1px 0 0 #d50000 !important
+}
+
+.input-field textarea:focus+label 
+{
+            color: #d50000 !important;
+}
+
+        /* label underline focus color */
+.row .input-field textarea:focus 
+{
+            border-bottom: 1px solid #d50000 !important;
+            box-shadow: 0 1px 0 0 #d50000 !important
+}
+
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+border: 2px solid #d50000 !important;
+ }
+
+.input-field select option {
+            color: #d50000 !important;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span::after 
+{
+            background-color: #d50000;
+}
+
+/*Update Status*/
+.switch-text
+{
+    color: #424242;
+    font-size: 15px;
+    font-weight: 500;
+   
+}
+
+.switch label input[type=checkbox]:checked+.lever
+{
+   
+  background-color: #ef9a9a ;
+}
+.switch label input[type=checkbox]:checked+.lever:after
+ {
+     
+  background-color: red;
+}
+
+
+#updateinfo-section
+{
+    display: none;
+}
+
+#updatestatus-section
+{
+    display: none;
+}
+
+#camplocation-section
+{
+    display: none;
+}

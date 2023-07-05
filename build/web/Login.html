@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .input-field label {
+            color: #000;
+        }
+
+        /* label focus color */
+        .input-field input:focus+label {
+            color: #d50000 !important;
+        }
+
+        /* label underline focus color */
+        .row .input-field input:focus {
+            border-bottom: 1px solid #d50000 !important;
+            box-shadow: 0 1px 0 0 #d50000 !important
+        }
+
+        .login {
+            margin-top: 60px;
+        }
+
+        .commonLink {
+            color: #d50000;
+            font-size: 13px;
+
+        }
+
+        .calink {
+            font-size: 14px;
+        }
+
+        .lbtn {
+            width: 100%;
+        }
+    </style>
+    <title>Login</title>
+</head>
+
+<body style="background-color: #d50000;">
+    <div class="container">
+        <div class="row login">
+            <div class="col m5 offset-m3">
+                <div class="card center">
+                    <div class="card-action">
+                        <h4>Login</h4>
+                    </div>
+                    <div class="card-content">
+                        <form action="log" method="post">
+                            <div class="row">
+                                <div class="input-field col s12 #b71c1c">
+                                    <input type="text" name="phno">
+                                    <label for="phno">Phone number</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="password" name="password">
+                                    <label for="password">Password</label>
+                                    <span class="right-align">
+                                        <a href="#" class="right commonLink">Forget Password?</a>
+
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <button class="btn lbtn red ">Login
+
+                                </button>
+                            </div>
+                            <div class="row">
+
+                                <span>
+                                    Don't have Account?
+                                    <a href="Registration.html" class="commonLink calink">Create Now</a>
+                                </span>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

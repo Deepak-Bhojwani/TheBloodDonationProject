@@ -1,0 +1,94 @@
+        .container {
+            width: 90%;
+
+        }
+
+        .navlogo {
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+
+        .slider-heading {
+            font-weight: 500;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .slidercontent {
+            padding-bottom: 20px;
+        }
+
+
+
+        .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+
+        }
+
+
+
+        .aboutsmallhead {
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .aboutlargehead {
+
+            margin-top: 2px;
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        .divider {
+            height: 3px;
+            width: 90px;
+            background-color: red;
+        }
+
+        .aboutconttext {
+            font-size: 20px;
+        }
+
+        .aboutconlist {
+            font-size: 18px;
+
+        }
+        .sectionHeading
+        {
+            padding-bottom: 30px;
+        }
+
+         .input-field label {
+            color: #000;
+        }
+
+        /* label focus color */
+        .input-field input:focus+label {
+            color: #d50000 !important;
+        }
+
+        /* label underline focus color */
+        .row .input-field input:focus {
+            border-bottom: 1px solid #d50000 !important;
+            box-shadow: 0 1px 0 0 #d50000 !important
+        }
+
+        .input-field textarea:focus+label {
+            color: #d50000 !important;
+        }
+
+        .row .input-field textarea:focus {
+            border-bottom: 1px solid #d50000 !important;
+            box-shadow: 0 1px 0 0 #d50000 !important
+        }

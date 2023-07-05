@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Compiled and minified CSS -->
+        <script src="jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <style>
+            .input-field label {
+                color: #000;
+            }
+
+            /* label focus color */
+            .input-field input:focus+label {
+                color: #d50000 !important;
+            }
+
+            /* label underline focus color */
+            .row .input-field input:focus {
+                border-bottom: 1px solid #d50000 !important;
+                box-shadow: 0 1px 0 0 #d50000 !important
+            }
+
+            .input-field textarea:focus+label {
+                color: #d50000 !important;
+            }
+
+            /* label underline focus color */
+            .row .input-field textarea:focus {
+                border-bottom: 1px solid #d50000 !important;
+                box-shadow: 0 1px 0 0 #d50000 !important
+            }
+
+
+            [type="radio"]:checked+span:after,
+            [type="radio"].with-gap:checked+span:before,
+            [type="radio"].with-gap:checked+span:after {
+                border: 2px solid #d50000 !important;
+            }
+
+            [type="radio"]:checked+span:after,
+            [type="radio"].with-gap:checked+span::after {
+                background-color: #d50000;
+            }
+        </style>
+        <title>registration form</title>
+    </head>
+
+    <body style="background-color: #d50000;">
+        <div class="container">
+            <div class="row">
+                <div class="col m9 offset-m2">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>
+                                Registration
+                            </h3>
+
+                            <div class="form">
+                                <form action="reg" method="POST" enctype="multipart/form-data">
+
+                                    <div class="row">
+                                        <div class="input-field col s12 #b71c1c">
+                                            <input type="text" name="fname">
+                                            <label for="fname">First Name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="text" name="lname">
+                                            <label for="lname">Last Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="email" name="email" class="validate">
+                                            <label for="email">E mail</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="password" name="pwd" id="txtNewPassword">
+                                            <label for="pwd">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="password" name="rpwd" id="txtConfirmPassword" onChange="isPasswordMatch();">
+                                            <label for="rpwd">Confirm Password</label>
+                                        </div>
+                                    </div>
+                                    <div id="divCheckPassword"></div>
+                                     <script src="jquery-3.6.0.min.js"></script>
+                                    <script>
+                                        
+                                        $('#txtConfirmPassword').on('keyup', function () {
+                                            $('#hulk').attr("disabled", true);
+                                            var password = $("#txtNewPassword").val();
+                                            var confirmPassword = $("#txtConfirmPassword").val();
+
+                                            if (password != confirmPassword) {
+                                                $("#divCheckPassword").html("Passwords do not match!");
+                                            } else {
+                                                $("#divCheckPassword").html("Passwords match.");
+                                                $("#hulk").removeAttr("disabled");
+                                            }
+                                        });
+                                    </script>
+                                    <!--                                <div class="row">
+                                                                        <div class="input-field col s12">
+                                                                            <input type="number" name="age">
+                                                                            <label for="age">Age</label>
+                                                                        </div>
+                                                                    </div>-->
+                                    <div class="row">
+                                        <div class="input-field col s5">
+                                            <select name="bloodgroup">
+                                                <option value="A+" selected>A+</option>
+                                                <option value="A-" class="red-text">A-</option>
+                                                <option value="B+">B+</option>
+                                                <option value="B-">B-</option>
+                                                <option value="O+">O+</option>
+                                                <option value="O-">O-</option>
+                                                <option value="AB+">AB+</option>
+                                                <option value="AB-">AB-</option>
+
+                                            </select>
+                                            <label>Blood Group</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="number" name="weight">
+                                            <label for="bg">Weight</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <p>Gender</p>
+                                            <p>
+                                                <span>
+                                                    <label>
+                                                        <input class="with-gap" name="gender" type="radio" value="male" />
+                                                        <span>Male</span>
+                                                    </label>
+                                                </span>
+                                                <span>
+                                                    <label>
+                                                        <input class="with-gap" name="gender" type="radio" value="female"/>
+                                                        <span>Female</span>
+                                                    </label>
+                                                </span>
+                                                <span>
+                                                    <label>
+                                                        <input class="with-gap" name="gender" type="radio" value="other" />
+                                                        <span>Other</span>
+                                                    </label>
+                                                </span>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <p>Date of birth</p>
+                                            <input type="date"  name="date">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea name="address" id="textarea1" class="materialize-textarea"></textarea>
+                                            <label for="address">Address</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="number" name="pin">
+                                            <label for="no">Pin Code</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="number" name="phno" maxlength="10">
+                                            <label for="phno">Phone no</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="number" name="sphno" minlength="10" maxlength="10">
+                                            <label for="sphno">Secound Phone no</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <div class="file-field input-field">
+                                                <div class="btn red ">
+                                                    <span>File</span>
+                                                    <input type="file" name="filename" required>
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input  class="file-path validate" type="text"
+                                                            placeholder="Upload Your Document ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <button class="btn waves-effect red" type="submit" name="regBtn" onclick="alert('Registered Successfully')" id="hulk">Submit
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                            var elms = document.querySelectorAll('select');
+                                            M.FormSelect.init(elms);
+                                        })
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+                                        const Calender = document.querySelector('.datepicker');
+                                        M.Datepicker.init(Calender, {
+                                            format: "yyyy-mm-dd"
+
+                                        });
+        </script>
+    </body>
+
+</html>
